@@ -1,0 +1,442 @@
+@import "fonts.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+svg {
+  cursor: pointer;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0 1em;
+}
+
+.card-body {
+  padding: 0 0 0 1.25em;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #1F2224;
+  padding-bottom: 20px;
+
+  .header {
+    padding-top: 22px;
+
+    .title {
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 33px;
+      color: #D6DDDE;
+      display: flex;
+      align-items: center;
+    }
+
+    .headerUl {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+
+      .headerLi {
+        position: relative;
+
+        .proModText {
+          font-family: Roboto, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+          color: #D6DDDE;
+          background: black;
+          position: absolute;
+          top: 22%;
+          left: -5px;
+          width: 56px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:nth-child(1) {
+          .proMod {
+            display: flex;
+
+            .leftDivIcon {
+              width: 25px;
+              height: 40px;
+              transform: skew(0deg, 34deg);
+              background: #499861;
+              border-radius: 5px;
+              margin-right: -5px;
+            }
+
+            .rightDivIcon {
+              width: 25px;
+              height: 40px;
+              transform: skew(0deg, -34deg);
+              background: #499861;
+              border-radius: 5px;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          .proMod {
+            display: flex;
+
+            .leftDivIcon {
+              width: 25px;
+              height: 40px;
+              transform: skew(0deg, 34deg);
+              background: #598B8D;
+              border-radius: 5px;
+              margin-right: -5px;
+            }
+
+            .rightDivIcon {
+              width: 25px;
+              height: 40px;
+              transform: skew(0deg, -34deg);
+              background: #598B8D;
+              border-radius: 5px;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          .proMod {
+            display: flex;
+
+            .leftDivIcon {
+              width: 25px;
+              height: 40px;
+              transform: skew(0deg, 34deg);
+              background: #DA9422;
+              border-radius: 5px;
+              margin-right: -5px;
+            }
+
+            .rightDivIcon {
+              width: 25px;
+              height: 40px;
+              transform: skew(0deg, -34deg);
+              background: #DA9422;
+              border-radius: 5px;
+            }
+          }
+        }
+
+        &.hide {
+          opacity: 0.25;
+        }
+      }
+    }
+
+    .simpleButton {
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  .management {
+    nav {
+      border-bottom: 1px solid rgba(139, 144, 145, 0.25);
+      padding: 0;
+    }
+
+    .managementUl {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+
+      a {
+        opacity: 0.6;
+        padding: 0 15px;
+
+        li {
+          font-family: Roboto, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 19px;
+          color: #D6DDDE;
+          padding: 20px 0;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &.active {
+          opacity: 1;
+          border-bottom: 1px solid #18A7FF;
+        }
+      }
+    }
+  }
+
+  .licence {
+    margin-top: 34px;
+
+    .systemTitle {
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: #D6DDDE;
+    }
+
+    .colNames {
+      display: flex;
+
+      p {
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #D6DDDE;
+        opacity: 0.6;
+      }
+    }
+
+    .systemLines {
+      margin-top: 10px;
+      background: #1A1C1E;
+      border-radius: 4px;
+      display: flex;
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      color: #D6DDDE;
+      padding: 5px;
+      align-items: center;
+
+      p {
+        margin: 0;
+      }
+
+      .name {
+        display: flex;
+
+        p {
+          margin-left: 10px;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: end;
+
+        button:nth-child(1) {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .subSystem {
+      padding-left: 1em;
+
+      .card {
+        overflow: visible;
+
+        &::before {
+          content: '';
+          width: 15px;
+          height: 6px;
+          background-color: #1A1C1E;
+          position: absolute;
+          z-index: 3;
+          top: 53%;
+          left: -0.89%;
+        }
+
+        &::after {
+          content: '';
+          width: 65px;
+          transform: rotate(90deg);
+          height: 6px;
+          background-color: #1A1C1E;
+          position: absolute;
+          z-index: 3;
+          top: 0;
+          left: -2.5%;
+        }
+      }
+
+      .card-header {
+        padding: 0;
+
+      }
+
+      .subNames {
+        margin-top: 15px;
+        background: #1F2224;
+        display: flex;
+
+        div {
+          &:first-child {
+            padding: 0 0 0 15px;
+          }
+
+          &:last-child {
+            padding: 0;
+          }
+
+          p {
+            font-family: Roboto, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #D6DDDE;
+            opacity: 0.6;
+          }
+        }
+      }
+
+      .systemLines {
+        padding: 20px 0;
+        text-align: start;
+
+        .name {
+          padding: 0 0 0 15px;
+
+          p {
+            margin: 0;
+          }
+        }
+
+        div {
+          &:nth-child(2) {
+            padding: 0;
+          }
+
+          &:last-child {
+            text-align: end;
+            padding-right: 25px;
+          }
+        }
+      }
+    }
+
+    .addSystem {
+      margin-top: 30px;
+    }
+
+    .imageBlock {
+      background: rgba(22, 24, 25, 0.26);
+      border: 1px dashed rgba(214, 221, 222, 0.26);
+      box-sizing: border-box;
+      border-radius: 4px;
+      height: 231px;
+      max-height: 231px;
+      overflow-y: auto;
+
+      .images {
+        padding: 20px 0;
+        display: flex;
+
+        .singleImage {
+          position: relative;
+
+          .myDelete {
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            padding: 2px 5px;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              color: white;
+              font-size: 20px;
+            }
+          }
+
+          .image {
+            border-radius: 4px;
+            margin-left: 20px;
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+
+      .inputBlock {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        span {
+          color: white;
+          font-family: Roboto, sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 19px;
+        }
+
+        .downloadBlock {
+          width: 40px;
+          height: 40px;
+          border: 2px solid #D6DDDE;
+          display: flex;
+          margin-bottom: 20px;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            font-size: 20px;
+            color: #D6DDDE;
+          }
+        }
+
+        .uploadButton {
+          background-color: transparent;
+          border: none;
+          color: #18A7FF;
+          margin-right: 10px;
+          cursor: pointer;
+
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
