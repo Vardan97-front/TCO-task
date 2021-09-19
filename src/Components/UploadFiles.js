@@ -31,7 +31,7 @@ const UploadFiles = ({
           <div className="downloadBlock">
             <FontAwesomeIcon icon={faArrowDown} />
           </div>
-          <div className="uploadButton">
+          <label className="uploadButton">
             Choose a file
             {' '}
             <span>to upload or drag it here</span>
@@ -42,7 +42,7 @@ const UploadFiles = ({
               multiple
               onChange={(ev) => fileUpload(ev)}
             />
-          </div>
+          </label>
           <span>
             (jpg, png, max size 5mb)
           </span>
